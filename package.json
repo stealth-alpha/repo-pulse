@@ -1,5 +1,5 @@
 {
-  "name": "repo-pulse",
+  "name": "@stealth-alpha/repo-pulse",
   "version": "0.1.0",
   "description": "One-command repository health snapshot: commit velocity, bus factor, stale dependencies and issue half-life — emits badge-ready JSON + SVG.",
   "type": "module",

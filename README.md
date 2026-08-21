@@ -16,13 +16,13 @@ Zero dependencies, Node 18+, runs entirely on your machine.
 ## Install
 
 ```sh
-npm install -g repo-pulse
+npm install -g @stealth-alpha/repo-pulse
 ```
 
 or run it once without installing:
 
 ```sh
-npx repo-pulse@latest
+npx @stealth-alpha/repo-pulse@latest
 ```
 
 ## 30-second quickstart
