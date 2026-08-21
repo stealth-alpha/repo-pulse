@@ -1,0 +1,51 @@
+{
+  "name": "repo-pulse",
+  "version": "0.1.0",
+  "description": "One-command repository health snapshot: commit velocity, bus factor, stale dependencies and issue half-life — emits badge-ready JSON + SVG.",
+  "type": "module",
+  "bin": {
+    "repo-pulse": "./bin/repo-pulse.js"
+  },
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./cli": "./src/cli.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "LICENSE",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node --test",
+    "start": "node bin/repo-pulse.js"
+  },
+  "keywords": [
+    "repository-health",
+    "bus-factor",
+    "commit-velocity",
+    "stale-dependencies",
+    "issue-half-life",
+    "badges",
+    "metrics",
+    "maintainer-tools",
+    "oss",
+    "cli"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Repo Pulse Contributors"
+  },
+  "homepage": "https://stealth-alpha.github.io/repo-pulse/",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stealth-alpha/repo-pulse.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stealth-alpha/repo-pulse/issues"
+  }
+}
