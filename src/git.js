@@ -1,4 +1,5 @@
 import { execFileSync } from "node:child_process";
+import path from "node:path";
 
 const RECORD_SEP = "\x1e";
 const FIELD_SEP = "\x1f";
