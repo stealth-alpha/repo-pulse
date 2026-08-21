@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="242" height="20" role="img" aria-label="issue half-life: no closed issues">
+  <title>issue half-life: no closed issues</title>
+  <linearGradient id="g603081698" x2="0" y2="100%">
+    <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
+    <stop offset="1" stop-opacity=".1"/>
+  </linearGradient>
+  <clipPath id="r"><rect width="242" height="20" rx="3" fill="#fff"/></clipPath>
+  <g clip-path="url(#r)">
+    <rect width="118" height="20" fill="#555"/>
+    <rect x="118" width="124" height="20" fill="#9f9f9f"/>
+    <rect width="242" height="20" fill="url(#g603081698)"/>
+  </g>
+  <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="11">
+    <text x="59" y="14" fill="#010101" fill-opacity=".3">issue half-life</text>
+    <text x="59" y="13">issue half-life</text>
+    <text x="180" y="14" fill="#010101" fill-opacity=".3">no closed issues</text>
+    <text x="180" y="13">no closed issues</text>
+  </g>
+</svg>

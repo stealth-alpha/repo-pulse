@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="151" height="20" role="img" aria-label="stale deps: unknown">
+  <title>stale deps: unknown</title>
+  <linearGradient id="g613446243" x2="0" y2="100%">
+    <stop offset="0" stop-color="#bbb" stop-opacity=".1"/>
+    <stop offset="1" stop-opacity=".1"/>
+  </linearGradient>
+  <clipPath id="r"><rect width="151" height="20" rx="3" fill="#fff"/></clipPath>
+  <g clip-path="url(#r)">
+    <rect width="85" height="20" fill="#555"/>
+    <rect x="85" width="66" height="20" fill="#9f9f9f"/>
+    <rect width="151" height="20" fill="url(#g613446243)"/>
+  </g>
+  <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="11">
+    <text x="42.5" y="14" fill="#010101" fill-opacity=".3">stale deps</text>
+    <text x="42.5" y="13">stale deps</text>
+    <text x="118" y="14" fill="#010101" fill-opacity=".3">unknown</text>
+    <text x="118" y="13">unknown</text>
+  </g>
+</svg>
