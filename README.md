@@ -123,3 +123,7 @@ can see whether health is improving or drifting month over month, custom
 scoring profiles tuned to your team's definition of "healthy", and priority
 support. It's the same engine under the hood — Pro just stops you from running
 it by hand twenty times. License via Gumroad — link placeholder.
+
+---
+
+Part of the [stealth-alpha toolkit](https://stealth-alpha.github.io/toolkit/) — eight zero-dependency CLIs for release automation, agent security, and repo hygiene.
