@@ -109,10 +109,15 @@ async function collectSnapshot(flags) {
 
   const config = loadConfig(cwd);
   const offline = flags.offline === true;
-  const weeks = Number.parseInt(flags.weeks ?? config.weeks, 10);
-  const maxAgeMonths = Number.parseInt(
+  const weeks = parsePositiveInt(
+    flags.weeks ?? config.weeks,
+    "--weeks",
+    "velocity window in weeks"
+  );
+  const maxAgeMonths = parsePositiveInt(
     flags["stale-months"] ?? config.maxAgeMonths,
-    10
+    "--stale-months",
+    "dependency staleness threshold in months"
   );
 
   const commits = getCommits({ cwd });
@@ -219,8 +224,31 @@ async function cmdInit(flags) {
   return 0;
 }
 
+/** Parse an integer option, failing with a readable message. */
+function parsePositiveInt(value, flagName, description) {
+  const n = Number.parseInt(value, 10);
+  if (Number.isNaN(n) || n < 1) {
+    throw new RepoPulseError(
+      `${flagName} must be a positive integer (${description}); got ${JSON.stringify(value ?? null)}`
+    );
+  }
+  return n;
+}
+
 export async function main(argv = process.argv.slice(2)) {
   const { flags, positional } = parseArgs(argv);
+
+  // Global flags win over the command word: parseArgs puts every `--x` in
+  // `flags`, so they would otherwise be invisible to the command dispatch.
+  if (flags.version) {
+    printVersion();
+    return;
+  }
+  if (flags.help) {
+    printHelp();
+    return;
+  }
+
   const command = positional[0] || "snapshot";
 
   try {
@@ -236,12 +264,10 @@ export async function main(argv = process.argv.slice(2)) {
       case "init":
         process.exitCode = await cmdInit(flags);
         break;
-      case "--version":
       case "-v":
       case "version":
         printVersion();
         break;
-      case "--help":
       case "-h":
       case "help":
         printHelp();
